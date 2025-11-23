@@ -17,9 +17,9 @@ public class QuizApplication {
     private void initializeQuestions() {
         // Question 1
         questions.add(new Question(
-            "What is the capital of France?",
-            new String[]{"1. London", "2. Paris", "3. Berlin", "4. Madrid"},
-            2
+            "Which keyword is used to declare a class in Java??",
+            new String[]{"1. class", "2. define", "3. struct", "4. object"},
+            1
         ));
 
         // Question 2
@@ -53,7 +53,7 @@ public class QuizApplication {
     }
 
     public void startQuiz() {
-        System.out.println("🎯 Welcome to the Java Quiz Application! 🎯");
+        System.out.println(" Welcome to the Java Quiz Application! ");
         System.out.println("===========================================");
         System.out.println("You will be presented with " + questions.size() + " questions.");
         System.out.println("Enter the number of your choice (1-4) for each question.\n");
@@ -97,15 +97,15 @@ public class QuizApplication {
 
     private void checkAnswer(Question question, int userAnswer) {
         if (question.isCorrect(userAnswer)) {
-            System.out.println("✅ Correct!");
+            System.out.println(" Correct!");
             score++;
         } else {
-            System.out.println("❌ Incorrect! The correct answer was: " + question.getCorrectOption());
+            System.out.println(" Incorrect! The correct answer was: " + question.getCorrectOption());
         }
     }
 
     private void displayResults() {
-        System.out.println("📊 Quiz Results 📊");
+        System.out.println(" Quiz Results ");
         System.out.println("===================");
         System.out.println("Total Questions: " + questions.size());
         System.out.println("Correct Answers: " + score);
@@ -116,13 +116,13 @@ public class QuizApplication {
 
         // Performance feedback
         if (percentage >= 80) {
-            System.out.println("🎉 Excellent! You're a Java master! 🎉");
+            System.out.println(" Excellent! You're a Java master! 🎉");
         } else if (percentage >= 60) {
-            System.out.println("👍 Good job! Keep practicing!");
+            System.out.println(" Good job! Keep practicing!");
         } else if (percentage >= 40) {
-            System.out.println("📚 Not bad! Review the basics and try again.");
+            System.out.println(" Not bad! Review the basics and try again.");
         } else {
-            System.out.println("💪 Don't give up! Practice makes perfect!");
+            System.out.println(" Don't give up! Practice makes perfect!");
         }
         
         scanner.close();
@@ -132,4 +132,5 @@ public class QuizApplication {
         QuizApplication quiz = new QuizApplication();
         quiz.startQuiz();
     }
+
 }
